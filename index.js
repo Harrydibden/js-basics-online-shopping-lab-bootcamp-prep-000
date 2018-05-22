@@ -32,16 +32,9 @@ function viewCart() {
         return `In your cart, you have ${cartView[0]}, and ${cartView[1]}.`;
         break;
       default:
-      
-    }
-    
-    if(cartView.length === 1){
-      return `In your cart, you have ${cartView[0]}.`;
-    } else if (cartView.length === 2){
-      return `In your cart, you have ${cartView[0]}, and ${cartView[1]}.`;
-    } else {
       return `In your cart, you have ${cartView.slice(0, cart.length - 1).join(", ")}, and ${cartView[cartView.length - 1]}.`;
     }
+    
   } else {
     return "Your shopping cart is empty."
   }
