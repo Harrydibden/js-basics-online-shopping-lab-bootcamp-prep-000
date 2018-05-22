@@ -18,7 +18,15 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  if(cart.length > 0){
+    let cartView = [];
+    for(let i = 0; i < cart.length; i++) {
+      cartView.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
+      return `In your cart, you have ${cartView.join(, )}`
+    }
+  } else {
+    return "Your shopping cart is empty."
+  }
 }
 
 function total() {
