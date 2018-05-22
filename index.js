@@ -23,7 +23,6 @@ function viewCart() {
     for(let i = 0; i < cart.length; i++) {
       cartView.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
     }
-    
     switch(cartView.length){
       case 1:
         return `In your cart, you have ${cartView[0]}.`;
@@ -32,7 +31,6 @@ function viewCart() {
       default:
       return `In your cart, you have ${cartView.slice(0, cart.length - 1).join(", ")}, and ${cartView[cartView.length - 1]}.`;
     }
-    
   } else {
     return "Your shopping cart is empty."
   }
