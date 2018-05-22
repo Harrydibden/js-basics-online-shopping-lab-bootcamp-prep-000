@@ -27,7 +27,6 @@ function viewCart() {
     switch(cartView.length){
       case 1:
         return `In your cart, you have ${cartView[0]}.`;
-        break;
       case 2:
         return `In your cart, you have ${cartView[0]}, and ${cartView[1]}.`;
         break;
