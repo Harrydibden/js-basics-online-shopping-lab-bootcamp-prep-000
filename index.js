@@ -23,6 +23,18 @@ function viewCart() {
     for(let i = 0; i < cart.length; i++) {
       cartView.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
     }
+    
+    switch(cartView.length){
+      case 1:
+        return `In your cart, you have ${cartView[0]}.`;
+        break;
+      case 2:
+        return `In your cart, you have ${cartView[0]}, and ${cartView[1]}.`;
+        break;
+      default:
+      
+    }
+    
     if(cartView.length === 1){
       return `In your cart, you have ${cartView[0]}.`;
     } else if (cartView.length === 2){
